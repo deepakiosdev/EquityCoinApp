@@ -44,13 +44,15 @@ final class EBCoinsListViewModel: EBCoinsListViewModelProtocol {
         debugPrint("Fetching page \(currentPage) of coins")
         do {
             let newCoins = try await coinService.fetchCoins(page: currentPage, limit: itemsPerPage)
-            // Remove duplicates based on UUID (id)
-            let uniqueCoins = Array(NSOrderedSet(array: newCoins.map { $0.id }).array as! [String]).compactMap { id in newCoins.first { $0.id == id } }
-            coins.append(contentsOf: uniqueCoins)
+            // Filter out any coins that already exist in the current collection
+            let uniqueNewCoins = newCoins.filter { newCoin in
+                !coins.contains(where: { $0.id == newCoin.id })
+            }
+            coins.append(contentsOf: uniqueNewCoins)
             currentPage += 1
             updateDisplayedCoins()
             errorMessage = nil
-            debugPrint("Fetched coins: \(uniqueCoins.count), total coins: \(coins.count)")
+            debugPrint("Fetched unique coins: \(uniqueNewCoins.count), total coins: \(coins.count)")
         } catch let error as EBNetworkError {
             errorMessage = error.localizedDescription
             debugPrint("API Error fetching coins: \(error.localizedDescription)")

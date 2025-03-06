@@ -1,6 +1,6 @@
 # EquityCoin
 
-An iOS application showcasing the top 100 cryptocurrencies with details, favorites and chart
+An iOS application showcasing the top 100 cryptocurrencies with details, favorites and performance chart
 
 ## Requirements
 - iOS 16.0+
@@ -44,8 +44,7 @@ An iOS application showcasing the top 100 cryptocurrencies with details, favorit
 - **Favorite State Management**: Updated `EBChartView` to use `@State` for local state syncing with parent via callbacks, resolving toggle issues.
 - **Private Property Access in Tests**: Adjusted tests to use public properties (e.g., `displayedCoins`) instead of private `coins` in `EBCoinsListViewModel`.
 - **Chart Creation**: Implemented a mountain-style chart in `EBChartView` using SwiftUI Charts with `AreaMark` and `LineMark`, ensuring dynamic scaling with min/max Y-values from price data.
-- **SVG Image Downloading**: Integrated `SDWebImageSwiftUI` to download and render SVG icons from CoinRanking API URLs (e.g., `iconUrl`), with `SDImageSVGCoder` for SVG support.
-
+- **SVG Image Downloading**: Integrated `SDWebImage` and SVGKit to download and render SVG icons. But thsese 3rd party sdk causing scrolling, performance issues and crashes. Build native solution that is working fine.
 
 ## Edge Cases
 - Empty coin lists or favorites handled with "No data available" messages.
@@ -58,5 +57,4 @@ An iOS application showcasing the top 100 cryptocurrencies with details, favorit
 
 
 ## TODO: 
-- Remove SDWebImage and write code for SVG image download. SDWebImage causing performance issue while downloading SGV iamge.
 - Make chart Interactive 

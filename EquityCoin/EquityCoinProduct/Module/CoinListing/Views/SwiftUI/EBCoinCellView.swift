@@ -2,42 +2,39 @@
 //  EBCoinCellView.swift
 //  EquityCoin
 //
-//  Created by Dipak Kumar Pandey on 26/02/25.
+//  Created by Dipak Kumar Pandey on 01/03/25.
 //
 
 import SwiftUI
-import SDWebImageSwiftUI
 
-/// Displays a single coin in a list with icon, name, price, 24h change, and favorite indicator.
 struct EBCoinCellView: View {
     let coin: EBCoin
     let isFavorite: Bool
+    @StateObject private var imageDownloader = EBImageDownloader()
+    private let imageSize: CGFloat = 30
     
     var body: some View {
         HStack {
             ZStack {
-                WebImage(url: URL(string: coin.iconUrl ?? "")) { phase in
-                    switch phase {
-                    case .success(let image):
-                        image
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 30, height: 30)
-                    case .failure(_):
-                        Image("defaultCrypto")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 30, height: 30)
-                            .foregroundColor(.gray)
-                    case .empty:
-                        ProgressView()
-                            .frame(width: 30, height: 30)
-                    @unknown default:
-                        EmptyView()
-                    }
+                if let uiImage = imageDownloader.image {
+                    Image(uiImage: uiImage)
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: imageSize, height: imageSize)
+                } else if let svgData = imageDownloader.svgData {
+                    EBSVGImageView(svgData: svgData, size: CGSize(width: imageSize, height: imageSize))
+                        .frame(width: imageSize, height: imageSize)
+                        .clipped()
+                } else {
+                    ProgressView()
+                        .frame(width: imageSize, height: imageSize)
                 }
-               .indicator(.activity)
-                .transition(.fade(duration: 0.5))
+            }
+            .onAppear {
+                imageDownloader.loadImage(from: coin.iconUrl)
+            }
+            .onDisappear {
+                imageDownloader.cancel()
             }
             
             VStack(alignment: .leading) {
@@ -62,7 +59,7 @@ struct EBCoinCellView: View {
     }
 }
 
-#Preview() {
+#Preview {
     EBCoinCellView(
         coin: EBCoin(
             id: "Qwsogvtv82FCd",
@@ -77,4 +74,3 @@ struct EBCoinCellView: View {
     )
     .preferredColorScheme(.light)
 }
-
