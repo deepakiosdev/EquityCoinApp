@@ -22,9 +22,6 @@ class EBSceneDelegate: UIResponder, UIWindowSceneDelegate {
                                            navigationController: navVC,
                                            coinService: coinService)
         coordinator.start()
-        
-        window.rootViewController = navVC
-        window.makeKeyAndVisible()
         self.window = window
         self.coordinator = coordinator
     }

@@ -130,54 +130,36 @@
             endingLineNumber = "22"
             landmarkName = "fetchCoins(page:limit:)"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "94A427C8-6AC7-417A-B3BA-9C090E68716E"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "EquityCoin/Mocking/MockDataFetchable.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "20"
-            endingLineNumber = "20"
-            landmarkName = "loadMockData(fileName:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "8AE5AD14-6BCC-41AC-9671-2A0917F675C8"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "EquityCoin/Mocking/MockDataFetchable.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
-            landmarkName = "loadMockData(fileName:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "3E099A82-038F-438C-9B7F-D08A6E805527"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "EquityCoin/Mocking/MockDataFetchable.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
-            landmarkName = "loadMockData(fileName:)"
-            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "A84AF730-D84F-446C-948A-5E390269C1C1 - 54e6dce8d9c13b1f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "EquityCoin.MockCoinService.fetchCoins(page: Swift.Int, limit: Swift.Int) async throws -&gt; Swift.Array&lt;EquityCoin.EBCoin&gt;"
+                  moduleName = "EquityCoin.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dipak/DDrive/WorkSpace/Job/Companies/EquityBank/EquityCoinApp/EquityCoin/Mocking/MockCoinService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22">
+               </Location>
+               <Location
+                  uuid = "A84AF730-D84F-446C-948A-5E390269C1C1 - 188ac124e1f71b3d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for EquityCoin.MockCoinService.fetchCoins(page: Swift.Int, limit: Swift.Int) async throws -&gt; Swift.Array&lt;EquityCoin.EBCoin&gt;"
+                  moduleName = "EquityCoin.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dipak/DDrive/WorkSpace/Job/Companies/EquityBank/EquityCoinApp/EquityCoin/Mocking/MockCoinService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -209,6 +191,38 @@
             startingLineNumber = "48"
             endingLineNumber = "48"
             landmarkName = "init(from:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AD200491-6480-404B-B791-CCACFF3D1625"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EquityCoin/EquityCoinProduct/Module/CoinListing/Coordinators/EBAppCoordinator.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "start()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9BE4E897-0738-4690-916B-B18820ECC792"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "EquityCoin/EquityCoinProduct/Module/CoinListing/Coordinators/EBAppCoordinator.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "showCoinDetail(coin:isFavorite:toggleFavorite:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

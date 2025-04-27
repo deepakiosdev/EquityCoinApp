@@ -16,7 +16,7 @@ class MockCoinService: EBCoinServiceProtocol {
         if let response: EBCoinResponse = MockDataFetchable.loadMockData(fileName: "CoinList") {
             self.mockCoins = response.data.coins
         }
-        self.mockHistory = MockDataFetchable.loadMockData(fileName: "history") ?? []
+        //self.mockHistory = MockDataFetchable.loadMockData(fileName: "history") ?? []
     }
     
     func fetchCoins(page: Int, limit: Int) async throws -> [EBCoin] {
