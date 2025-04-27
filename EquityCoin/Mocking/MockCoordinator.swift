@@ -6,7 +6,6 @@
 //
 
 import UIKit
-@testable import EquityCoin
 
 class MockCoordinator: EBAppCoordinator {
     var didShowCoinDetail = false

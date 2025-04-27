@@ -6,11 +6,18 @@
 //
 
 import Foundation
-@testable import EquityCoin
 
 class MockCoinService: EBCoinServiceProtocol {
     var mockCoins: [EBCoin] = []
     var mockHistory: [EBCoinHistory] = []
+    
+    init() {
+        // Load mock data when initializing the service
+        if let response: EBCoinResponse = MockDataFetchable.loadMockData(fileName: "CoinList") {
+            self.mockCoins = response.data.coins
+        }
+        self.mockHistory = MockDataFetchable.loadMockData(fileName: "history") ?? []
+    }
     
     func fetchCoins(page: Int, limit: Int) async throws -> [EBCoin] {
         return mockCoins

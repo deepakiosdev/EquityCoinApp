@@ -37,6 +37,16 @@
 			);
 			target = 9E495A922D6F7EBB0076D9D8 /* EquityCoin */;
 		};
+		9E85BC532DBE652900584C81 /* Exceptions for "EquityCoin" folder in "EquityCoinTests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Mocking/MockCoinService.swift,
+				Mocking/MockCoordinator.swift,
+				Mocking/MockDataFetchable.swift,
+				Mocking/MockJson/CoinList.json,
+			);
+			target = 9E495AA82D6F7EBC0076D9D8 /* EquityCoinTests */;
+		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -44,6 +54,7 @@
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
 				9E495ABB2D6F7EBC0076D9D8 /* Exceptions for "EquityCoin" folder in "EquityCoin" target */,
+				9E85BC532DBE652900584C81 /* Exceptions for "EquityCoin" folder in "EquityCoinTests" target */,
 			);
 			path = EquityCoin;
 			sourceTree = "<group>";
